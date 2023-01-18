@@ -1,10 +1,10 @@
 import React from "react";
-import Class from "./components/Class";
+import ES6 from "./components/ES6";
 
 function App() {
   return (
     <div className="App">
-      <Class />
+      <ES6 />
     </div>
   );
 }
