@@ -2,9 +2,10 @@ import { render } from '@testing-library/react';
 import ReactDOM from 'react-dom/client';
 import React from 'react'
 
-export default function ES6() {
+function ES6() {
   
   // class example
+  
     class Person {
         constructor(name,age) {
           this.name = name;
@@ -18,17 +19,18 @@ export default function ES6() {
       
       
       class Post extends Person {
-        constructor(name, age, rule) {
+        constructor(name, age, role) {
           super(name,age);
-          this.rule = rule;
+          this.role = role;
         }  
         show() {
-          return this.present() + ', and im ' + this.rule
+          return this.present() + ', and im ' + this.role
         }
       }
     
-      const mycar = new Post("ahmad","28", "manager");
-      document.write(mycar.show());
+      const personInfo = new Post("ahmad", "28", "manager");
+
+      document.write(personInfo.show());
   
 
 
@@ -70,12 +72,46 @@ export default function ES6() {
   
       // const myArrey = friends.map((item) => <li>{item}</li>)
 
+
+
+
+  //Destructuring
+
+
+  const studentInfo = {
+    name: 'ayoub boukkour',
+    age: 22 ,
+    gender: 'male'
+  }
+
+  const {name, age, gender} = studentInfo
+
+//Spread Opirator
+
+const players = ['mark', 'jack', 'sozen', 'reacherd', 'hamza', 'rick', 'zack', 'roberto', 'cristiano']
+
+const [one, two, tree, ...others] = players 
+
+
+
   return (
     <div>
-      
+      <ul>
+        <li>{name}</li>
+        <li>{age}</li>
+        <li>{gender}</li>
+      </ul>
+
+      <ul>
+        <li>{one}</li>
+        <li>{two}</li>
+        <li>{tree}</li>
+        <li>{others}</li>
+      </ul>
     </div>
   )
 }
 
 
 
+export default ES6()
