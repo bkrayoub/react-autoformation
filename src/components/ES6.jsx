@@ -93,6 +93,21 @@ const players = ['mark', 'jack', 'sozen', 'reacherd', 'hamza', 'rick', 'zack', '
 const [one, two, tree, ...others] = players 
 
 
+//Ternary Operator
+
+var bool = true
+function isTrue(){
+  return 'Variable returns true'
+}
+
+function isntTrue(){
+  return 'Variable returns false'
+}
+ 
+bool ? isTrue() : isntTrue();
+
+
+
 
   return (
     <div>
@@ -114,4 +129,4 @@ const [one, two, tree, ...others] = players
 
 
 
-export default ES6()
+export default ES6() //Modules
