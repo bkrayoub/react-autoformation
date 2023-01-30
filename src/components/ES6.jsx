@@ -70,7 +70,8 @@ function ES6() {
       
   // map arrey method example 
   
-      // const myArrey = friends.map((item) => <li>{item}</li>)
+      // const myArrey = friends.map((friend) => <li>{friend}</li>)
+      // friends.forEach(friend => {friend});
 
 
 
